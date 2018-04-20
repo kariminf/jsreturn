@@ -36,6 +36,10 @@
     "coding",
     "code-lisibility"
   ],
+  "files": [
+    "jsreturn.js",
+    "dist/"
+  ],
   "author": "Abdelkrime Aries <kariminfo0@gmail.com>",
   "license": "MIT",
   "bugs": {

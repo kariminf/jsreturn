@@ -32,7 +32,20 @@
     eif = false;
   }
 
+  JsReturn.clear = function(v) {
+    cache = [];
+    current = {};
+    vars = {};
+    varsL = "";
+    def = "";
+
+    eif = false;
+    letvar = "";
+    return JsReturn;
+  };
+
   JsReturn.let = function(v) {
+
     letvar = v + " = ";
     if(varsL) varsL += "|";
     varsL += v;
@@ -91,7 +104,7 @@
   };
 
   JsReturn.default = function (ret) {
-    def = ret;
+    def = repVars(ret);
   };
 
 
@@ -106,6 +119,20 @@
     }
 
     return eval(def);
+
+  };
+
+  JsReturn.prog = function () {
+    let prg = "";
+    for(let i = 0; i < cache.length; i++) {
+      let item = cache[i];
+      if (item.code) prg += item.code + "\n";
+      else if (item.cond) {
+        prg += "if (" + item.cond + ") return " + item.ret + "\n";
+      }
+    }
+
+    return prg;
 
   };
 

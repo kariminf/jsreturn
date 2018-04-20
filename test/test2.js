@@ -1,20 +1,13 @@
 
 function func(val) {
-  let b = 5;
-  if (typeof val === "string") return val;
-  if (val === 0) return "zero";
-
-  let a = val - 1;
-
-  if (a === 0) return "one";
-
-  if (a === b) return "Our fixed value minus one";
+  let m;
+  if (/^()able$/.test(val)) return
 
   return "value is " + val;
 }
 
 function func2(val) {
-  let jsreturn = require("./jsreturn");
+  let jsreturn = require("../jsreturn");
 
   jsreturn.let('val').be(val)
           .let("b").be(5)

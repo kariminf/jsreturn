@@ -9,12 +9,15 @@ function func(val) {
   if (a === 0) return "one";
 
   if (a === b) return "Our fixed value minus one";
+  
+  const used = process.memoryUsage().heapUsed / 1024 / 1024;
+  console.log(`func uses approximately ${used} MB`);
 
   return "value is " + val;
 }
 
 function func2(val) {
-  let jsreturn = require("./jsreturn");
+  let jsreturn = require("../jsreturn");
 
   jsreturn.let('val').be(val)
           .let("b").be(5)
@@ -24,6 +27,9 @@ function func2(val) {
           .if('a === 0').ret('"one"')
           .if('a === b').ret('"Our fixed value minus one"')
           .default('"value is " + val');
+          
+  const used = process.memoryUsage().heapUsed / 1024 / 1024;
+  console.log(`func2 uses approximately ${used} MB`);
 
   return jsreturn.eval();
 
