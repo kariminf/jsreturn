@@ -1,0 +1,26 @@
+{
+  "name": "jsreturn",
+  "version": "1.0.0",
+  "description": "A tool to select from many possible returns",
+  "main": "jsreturn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kariminf/jsreturn.git"
+  },
+  "keywords": [
+    "api",
+    "nodejs",
+    "javascript",
+    "coding",
+    "code-lisibility"
+  ],
+  "author": "Abdelkrime Aries <kariminfo0@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kariminf/jsreturn/issues"
+  },
+  "homepage": "https://github.com/kariminf/jsreturn#readme"
+}
