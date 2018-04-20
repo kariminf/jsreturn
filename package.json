@@ -3,6 +3,25 @@
   "version": "1.0.0",
   "description": "A tool to select from many possible returns",
   "main": "jsreturn.js",
+  "devDependencies": {
+    "codecov": "^2.3.1",
+    "eslint": "^4.19.1",
+    "expect.js": "^0.3.1",
+    "http-server": "^0.10.0",
+    "inchjs": "^0.4.1",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.3",
+    "jslint": "^0.11.0",
+    "mocha": "^3.5.3",
+    "tui-jsdoc-template": "^1.2.2",
+    "uglify-es": "^3.3.10"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
